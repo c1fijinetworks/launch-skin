@@ -1,0 +1,18 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import GoogleContactForm from '~/components/widgets/GoogleContactForm.astro';
+
+const metadata = {
+  title: 'Contact | Address.Hair',
+  description: 'Reach out for white-glove setup or support.',
+};
+---
+<Layout metadata={metadata}>
+  <HeroText 
+    tagline="Support"
+    title="We handle everything." 
+    subtitle="Have questions about the Address.Hair Concept? Our team is ready to help you shine online."
+  />
+  <GoogleContactForm />
+</Layout>
