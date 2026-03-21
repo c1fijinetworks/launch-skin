@@ -6,64 +6,60 @@ import Pricing from '~/components/widgets/Pricing.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
 const metadata = { 
-  title: 'The Story | Address.Hair', 
-  description: 'Why we build boutique websites for the world’s best hair stylists.' 
+  title: 'The Story | Launch.Skin', 
+  description: 'Why we build boutique websites for the world’s best skin clinics.' 
 };
 ---
 <Layout metadata={metadata}>
   <Hero2
     tagline="The Story"
-    title='Elite Websites for <span class="text-accent">Elite Stylists</span>'
-    subtitle="We believe your digital address should be as beautiful as the transformations you create at the chair. Your website is your digital handshake, and it should reflect the luxury your brand represents."
+    title='Elite Websites for <span class="text-accent">Elite Practitioners</span>'
+    subtitle="We believe your digital address should be as pristine as the results you create in the treatment room. Your website is your digital handshake."
     actions={[{ variant: 'primary', text: 'Secure My Address', href: '/pricing/' }]}
-    image={{ src: '/images/hero-poster.webp', alt: 'Address.Hair Professional Branding' }}
+    image={{ src: '/images/hero-poster.webp', alt: 'Launch.Skin Professional Branding' }}
   />
   
-  <Content
-    isReversed={false}
-    items={[
-        { 
-          title: 'Mirror Your Luxury', 
-          description: 'You’ve spent years perfecting your craft and thousands of dollars designing your salon space. Why settle for a generic booking link? We believe your digital home should mirror the luxury and vibe of your physical shop. We focus on the aesthetic details that signal to a client that they are in expert hands before they even book.', 
-          icon: 'tabler:award' 
-        },
-        { 
-          title: 'Focus on Artistry, Not Tech', 
-          description: 'Stylists are artists, not web developers. Our mission is to bridge the gap between your creativity and the technical world. We handle the servers, the code, and the social media integrations so that your online presence stays perfect while you focus on making your clients look and feel beautiful. We are your backend tech team.', 
-          icon: 'tabler:brush' 
-        },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-3xl font-bold mb-4">Our Technical Philosophy</h3>
-      <p class="text-lg text-muted">In the modern beauty industry, "Generic" is the enemy of "Luxury." We move beyond the cluttered links and messy apps to provide a clean, dedicated digital address that establishes you as a local authority. Address.Hair is built on the belief that a website shouldn't be a chore—it should be a salesperson that never sleeps.</p>
-    </Fragment>
-    <Fragment slot="image">
-       <img src="/images/testimonial-4.webp" alt="Elite salon styling" class="rounded-lg shadow-xl w-full" />
-    </Fragment>
-  </Content>
-
   <Content
     isReversed={true}
     items={[
         { 
-          title: 'A New Standard for Salons', 
-          description: 'The Address.Hair system was designed by a team that understands the salon industry. We know that content is king, but time is scarce. That is why our Instagram Sync is the core of our engine. Your best work is already on social media; we simply give it the high-end gallery it deserves on a professional domain.', 
-          icon: 'tabler:rocket' 
+          title: 'The "Mirror" Moment', 
+          description: 'The best time to build trust is the second your patient sees their skin results. Our system captures that momentum and presents it on a high-end clinical domain.', 
+          icon: 'tabler:sparkles' 
         },
         { 
-          title: 'White-Glove Support', 
-          description: 'When you join Address.Hair, you aren\'t just buying a software license. You are getting a white-glove setup service. We configure your vanity URL, link your social accounts, and ensure your site is perfectly indexed by Google. We handle the heavy lifting so you can stay behind the chair where you belong.', 
-          icon: 'tabler:headset' 
+          title: 'Local Authority SEO', 
+          description: 'When someone searches "best skin clinic near me," Google looks for authority. A professional Launch.Skin URL signals that you are a top-tier medical provider.', 
+          icon: 'tabler:map-pin' 
         },
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-3xl font-bold mb-4">The Digital Address Difference</h3>
-      <p class="text-lg text-muted">Whether you are a solo booth renter or a high-end salon owner, your digital address is your most valuable asset. It is where your reputation lives online. We take that responsibility seriously, ensuring your site is fast, secure, and stunningly beautiful.</p>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Why your clinic needs <span class="text-accent">Results on Autopilot ⭐⭐⭐⭐⭐</span>
+      </h3>
+      <p>Patients look at screens before they look at your clinic. In the aesthetic industry, your digital presence is your handshake—we make sure yours is a 5-star introduction.</p>
     </Fragment>
-    <Fragment slot="image">
-       <img src="/images/testimonial-3.webp" alt="Stylist working" class="rounded-lg shadow-xl w-full" />
+  </Content>
+
+  <Content
+    isReversed={false}
+    items={[
+        { 
+          title: 'Focus on Results, Not Tech', 
+          description: 'Practitioners are experts in biology, not code. We handle the servers and social integrations so your online presence stays perfect while you focus on patient care.', 
+          icon: 'tabler:brush' 
+        },
+        { 
+          title: 'One-Time License', 
+          description: 'We don’t believe in monthly "SaaS taxes" that eat your clinic profits. $99 once, and you own the system for the life of your business.', 
+          icon: 'tabler:coin' 
+        },
+    ]}
+  >
+    <Fragment slot="content">
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">Our Clinical Philosophy</h2>
+      <p class="text-muted text-lg mb-6">In the modern beauty industry, "Generic" is the enemy of "Expertise." We move beyond messy apps to provide a clean, dedicated digital address that establishes you as a local authority.</p>
     </Fragment>
   </Content>
 
