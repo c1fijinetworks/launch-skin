@@ -1,6 +1,6 @@
 site:
-  name: Address.Hair
-  site: 'https://address.hair'
+  name: Launch.Skin
+  site: 'https://launch.skin'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Address.Hair - Effortless Salon Testimonials
-    template: '%s — Address.Hair'
+    default: Launch.Skin - Effortless Salon Testimonials
+    template: '%s — Launch.Skin'
   description: "Capture salon client reviews instantly. Turn happy clients into powerful testimonials before they leave."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Address.Hair
+    site_name: Launch.Skin
     images:
       - url: '~/assets/images/default.png'
         width: 1200

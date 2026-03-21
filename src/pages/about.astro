@@ -7,14 +7,14 @@ import { lifetimeDeal } from '~/data/pricingData';
 
 const metadata = { 
   title: 'The Story | Launch.Skin', 
-  description: 'Why we build boutique websites for the world’s best skin clinics.' 
+  description: 'Why we build boutique websites for the world’s best skin clinics. Learn how we help practitioners dominate their local market.' 
 };
 ---
 <Layout metadata={metadata}>
   <Hero2
     tagline="The Story"
     title='Elite Websites for <span class="text-accent">Elite Practitioners</span>'
-    subtitle="We believe your digital address should be as pristine as the results you create in the treatment room. Your website is your digital handshake."
+    subtitle="We believe your digital address should be as pristine as the results you create in the treatment room. Amazing practitioners lose patients when their online presence doesn't match their expertise."
     actions={[{ variant: 'primary', text: 'Secure My Address', href: '/pricing/' }]}
     image={{ src: '/images/hero-poster.webp', alt: 'Launch.Skin Professional Branding' }}
   />
@@ -32,7 +32,13 @@ const metadata = {
           description: 'When someone searches "best skin clinic near me," Google looks for authority. A professional Launch.Skin URL signals that you are a top-tier medical provider.', 
           icon: 'tabler:map-pin' 
         },
+        { 
+          title: 'Patient Advocacy', 
+          description: 'A professional digital home builds deeper trust. Our system turns one-time procedures into lifelong patients by presenting your results in a luxury clinical environment.', 
+          icon: 'tabler:users' 
+        },
     ]}
+    image={{ src: '/images/testimonial-4.webp', alt: 'Clinic professional working on patient' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -46,22 +52,28 @@ const metadata = {
     isReversed={false}
     items={[
         { 
-          title: 'Focus on Results, Not Tech', 
-          description: 'Practitioners are experts in biology, not code. We handle the servers and social integrations so your online presence stays perfect while you focus on patient care.', 
-          icon: 'tabler:brush' 
+          title: 'Zero Maintenance', 
+          description: 'We know you are busy with patient consultations. Once we set up your vanity URL and sync your feeds, you never have to log in or "manage" a website again.', 
+          icon: 'tabler:settings' 
         },
         { 
-          title: 'One-Time License', 
-          description: 'We don’t believe in monthly "SaaS taxes" that eat your clinic profits. $99 once, and you own the system for the life of your business.', 
+          title: 'The "Wall of Results" Widget', 
+          description: 'We automatically sync your best Instagram transformations directly to your site, building instant trust with new patients 24/7.', 
+          icon: 'tabler:stars' 
+        },
+        { 
+          title: 'One-Time Payment', 
+          description: 'We don’t believe in monthly fees that eat your profits. $99 once, and you own the system for the life of your clinic.', 
           icon: 'tabler:coin' 
         },
     ]}
+    image={{ src: '/images/testimonial-3.webp', alt: 'Skin practitioner reviewing feedback' }}
   >
     <Fragment slot="content">
-      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">Our Clinical Philosophy</h2>
-      <p class="text-muted text-lg mb-6">In the modern beauty industry, "Generic" is the enemy of "Expertise." We move beyond messy apps to provide a clean, dedicated digital address that establishes you as a local authority.</p>
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">Our Commitment to Your Success</h2>
+      <p class="text-muted text-lg mb-6">We aren't just another tech company. We are a partner in your clinic’s growth. We handle the technical hurdles so you can stay focused on clinical excellence.</p>
     </Fragment>
   </Content>
 
-  <Pricing title="Ready to Own Your Professional Identity?" prices={[lifetimeDeal]} />
+  <Pricing title='<span class="text-accent dark:text-white">Invest in Your Clinic’s Future.</span>' prices={[lifetimeDeal]} />
 </Layout>
