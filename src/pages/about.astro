@@ -1,79 +1,72 @@
 ---
+import Hero from '~/components/widgets/Hero.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
-const metadata = { 
-  title: 'The Story | Launch.Skin', 
-  description: 'Why we build boutique websites for the world’s best skin clinics. Learn how we help practitioners dominate their local market.' 
+const metadata = {
+  title: 'Our Mission - Launch.Skin | Built for Practitioners',
+  description: 'We built Launch.Skin because skincare is a science and an art, but business is about trust. Learn how we help clinics dominate Google search.',
+  ignoreTitleTemplate: true,
 };
 ---
+
 <Layout metadata={metadata}>
-  <Hero2
-    tagline="The Story"
-    title='Elite Websites for <span class="text-accent">Elite Practitioners</span>'
-    subtitle="We believe your digital address should be as pristine as the results you create in the treatment room. Amazing practitioners lose patients when their online presence doesn't match their expertise."
-    actions={[{ variant: 'primary', text: 'Secure My Address', href: '/pricing/' }]}
-    image={{ src: '/images/hero-poster.webp', alt: 'Launch.Skin Professional Branding' }}
+<Hero2
+    tagline="We Grow Your Clinic ⭐⭐⭐⭐⭐"
+    title='You Create the Radiant Skin.<br/><span class="text-accent dark:text-white">We Help You Build Your Reputation.</span>'
+    subtitle="Amazing estheticians lose clients without reviews. We ensure your reputation matches your results. No monthly fees—just a simple, automated system to keep your books full."
+    video="/images/hero-animation.mp4" 
+    poster="/images/hero-poster.webp"
+    actions={[{ variant: 'primary', text: 'Claim My Lifetime Access - $99', href: '/pricing/' }]}
   />
-  
+
   <Content
-    isReversed={true}
+    isReversed
     items={[
-        { 
-          title: 'The "Mirror" Moment', 
-          description: 'The best time to build trust is the second your patient sees their skin results. Our system captures that momentum and presents it on a high-end clinical domain.', 
-          icon: 'tabler:sparkles' 
-        },
-        { 
-          title: 'Local Authority SEO', 
-          description: 'When someone searches "best skin clinic near me," Google looks for authority. A professional Launch.Skin URL signals that you are a top-tier medical provider.', 
-          icon: 'tabler:map-pin' 
-        },
-        { 
-          title: 'Patient Advocacy', 
-          description: 'A professional digital home builds deeper trust. Our system turns one-time procedures into lifelong patients by presenting your results in a luxury clinical environment.', 
-          icon: 'tabler:users' 
-        },
+        { title: 'The "Radiant Results" Moment', description: 'The best time for a review is the second your client sees their glowing skin in the mirror. Your branded QR codes capture that post-treatment glow instantly.', icon: 'tabler:sparkles' },
+        { title: 'Local Search SEO', description: 'When someone searches "best skin clinic near me," Google looks for star rating and review frequency. We automate both.', icon: 'tabler:map-pin' },
+        { title: 'Client Retention', description: 'A client who leaves a 5-star review is 40% more likely to re-book. Our system turns a one-time treatment into a lifelong advocate.', icon: 'tabler:users' },
     ]}
-    image={{ src: '/images/testimonial-4.webp', alt: 'Clinic professional working on patient' }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Why your clinic needs <span class="text-accent">Results on Autopilot ⭐⭐⭐⭐⭐</span>
+        Why your clinic needs <span class="text-accent">Reviews on Autopilot ⭐⭐⭐⭐⭐</span>
       </h3>
-      <p>Patients look at screens before they look at your clinic. In the aesthetic industry, your digital presence is your handshake—we make sure yours is a 5-star introduction.</p>
+      <p>Clients look at results, not promises. Your reviews are your digital portfolio—we make sure yours is a 5-star introduction.</p>
+    </Fragment>
+    <Fragment slot="image">
+       <img src="/images/testimonial-4.webp" alt="Happy skin clinic client" class="rounded-lg shadow-xl w-full" />
     </Fragment>
   </Content>
 
   <Content
-    isReversed={false}
     items={[
-        { 
-          title: 'Zero Maintenance', 
-          description: 'We know you are busy with patient consultations. Once we set up your vanity URL and sync your feeds, you never have to log in or "manage" a website again.', 
-          icon: 'tabler:settings' 
-        },
-        { 
-          title: 'The "Wall of Results" Widget', 
-          description: 'We automatically sync your best Instagram transformations directly to your site, building instant trust with new patients 24/7.', 
-          icon: 'tabler:stars' 
-        },
-        { 
-          title: 'One-Time Payment', 
-          description: 'We don’t believe in monthly fees that eat your profits. $99 once, and you own the system for the life of your clinic.', 
-          icon: 'tabler:coin' 
-        },
+      { title: 'Zero Maintenance', description: 'We know you’re busy with back-to-back treatments. Once we set up your system, you never have to log in or manage anything.', icon: 'tabler:settings' },
+      { title: 'The "Wall of Love" Widget', description: 'We automatically sync and showcase your best reviews on your website, building instant trust with new visitors.', icon: 'tabler:stars' },
+      { title: 'One-Time Payment', description: 'We don’t believe in monthly fees. $99 once, and you own the system for the life of your clinic.', icon: 'tabler:coin' },
     ]}
-    image={{ src: '/images/testimonial-3.webp', alt: 'Skin practitioner reviewing feedback' }}
   >
     <Fragment slot="content">
       <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">Our Commitment to Your Success</h2>
-      <p class="text-muted text-lg mb-6">We aren't just another tech company. We are a partner in your clinic’s growth. We handle the technical hurdles so you can stay focused on clinical excellence.</p>
+      <p class="text-xl text-muted dark:text-slate-400 mb-8">We handle the technical hurdles so you can stay focused on your clients. We are a partner in your growth, ensuring your online presence is as flawless as your results.</p>
+    </Fragment>
+    <Fragment slot="image">
+      <img src="/images/testimonial-3.webp" alt="Skin professional looking at feedback" class="rounded-lg shadow-xl w-full" />
     </Fragment>
   </Content>
 
-  <Pricing title='<span class="text-accent dark:text-white">Invest in Your Clinic’s Future.</span>' prices={[lifetimeDeal]} />
+  <Pricing
+    class="pb-0"
+    title={`<span class="text-accent dark:text-white">Invest in Your Clinic’s Future.</span>`}
+    prices={[lifetimeDeal]}
+  />
+
+  <Hero class="-mt-16">
+    <Fragment slot="image">
+      <img src="/images/testimonial-6.webp" alt="A wall of radiant reviews" class="mx-auto rounded-md w-full shadow-lg" loading="lazy" />
+    </Fragment>
+  </Hero>
 </Layout>
