@@ -1,58 +1,47 @@
 ---
-import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
-import Layout from '~/layouts/PageLayout.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
-const metadata = { 
-  title: 'The Story | Launch.Skin', 
-  description: 'Why we build boutique websites for the world’s best skin practitioners.' 
-};
+const metadata = { title: 'The Story | Launch.Skin' };
 ---
 <Layout metadata={metadata}>
   <Hero2
-    tagline="The Story"
-    title='Elite Websites for <span class="text-accent">Elite Clinics</span>'
-    subtitle="We believe your digital address should be as beautiful as the results you create in the treatment room. Your website is your digital handshake, and it should reflect the luxury your brand represents."
+    tagline="Our Philosophy"
+    title='Elite Websites for <span class="text-accent">Elite Practitioners</span>'
+    subtitle="We believe your digital address should be as beautiful as the radiant skin you create. Your website is your handshake, and it should reflect clinical luxury."
     actions={[{ variant: 'primary', text: 'Secure My Address', href: '/pricing/' }]}
-    image={{ src: '/images/hero-poster.webp', alt: 'Launch.Skin Professional Branding' }}
+    image={{ src: '/images/hero-poster.webp', alt: 'Launch.Skin Branding' }}
   />
   
   <Content
     isReversed={false}
     items={[
-        { 
-          title: 'Mirror Your Luxury', 
-          description: 'You’ve spent years perfecting your protocols and designing your clinic space. Your digital home should mirror that luxury and signal expertise before a client even books.', 
-          icon: 'tabler:award' 
-        },
-        { 
-          title: 'Focus on Results, Not Tech', 
-          description: 'Practitioners are clinicians, not web developers. We handle the servers, the code, and the social integrations so you can stay focused on your clients.', 
-          icon: 'tabler:brush' 
-        },
+        { title: 'Mirror Your Luxury', description: 'Your digital home should signal expertise before a client even books.', icon: 'tabler:award' },
+        { title: 'Focus on Skin, Not Tech', description: 'We handle the servers and code so you can focus on making clients glow.', icon: 'tabler:brush' },
     ]}
   >
     <Fragment slot="content">
       <h3 class="text-3xl font-bold mb-4">Our Technical Philosophy</h3>
-      <p class="text-lg text-muted">In the modern medical-aesthetic industry, "Generic" is the enemy of "Luxury." We provide a clean, dedicated digital address that establishes you as a local authority.</p>
+      <p class="text-lg text-muted">In the modern beauty industry, "Generic" is the enemy. We provide a dedicated digital address that establishes local authority.</p>
     </Fragment>
-    <Fragment slot="image">
-       <img src="/images/testimonial-4.webp" alt="Elite clinic styling" class="rounded-lg shadow-xl w-full" />
-    </Fragment>
+    <Fragment slot="image"><img src="/images/testimonial-4.webp" alt="Elite Clinic" class="rounded-lg shadow-xl w-full" /></Fragment>
   </Content>
 
-  <Pricing 
-    class="pb-0"
-    title="Ready to Own Your Professional Identity?" 
-    prices={[lifetimeDeal]} 
-  />
+  <Content
+    isReversed={true}
+    items={[
+        { title: 'A New Clinical Standard', description: 'Your best work deserves a high-end gallery with automated sync.', icon: 'tabler:rocket' },
+        { title: 'White-Glove Support', description: 'We configure your vanity URL so you can stay in the treatment room.', icon: 'tabler:headset' },
+    ]}
+  >
+    <Fragment slot="content"><h3 class="text-3xl font-bold mb-4">The Digital Difference</h3></Fragment>
+    <Fragment slot="image"><img src="/images/testimonial-3.webp" alt="Practitioner" class="rounded-lg shadow-xl w-full" /></Fragment>
+  </Content>
 
-  <Hero class="-mt-16">
-    <Fragment slot="image">
-      <img src="/images/testimonial-6.webp" alt="Professional skin clinic website preview" class="mx-auto rounded-md w-full shadow-lg" loading="lazy" />
-    </Fragment>
-  </Hero>
+  <Pricing title="Own Your Professional Identity" prices={[lifetimeDeal]} />
+  <Hero class="-mt-16"><Fragment slot="image"><img src="/images/testimonial-6.webp" alt="Preview" class="mx-auto rounded-md w-full shadow-lg" /></Fragment></Hero>
 </Layout>

@@ -1,53 +1,83 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
+import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
-const metadata = { 
-  title: 'Launch.Skin | Digital Masterpieces for Elite Skin Clinics', 
-  description: 'The $99 luxury alternative to monthly website subscriptions. Automated Instagram portfolios for the world’s best skin practitioners.' 
+const metadata = {
+  title: 'Launch.Skin | Digital Masterpieces for Elite Skin Clinics',
+  description: 'High-end websites with automated Instagram sync and vanity URLs for elite skin practitioners. $99 Forever.',
 };
 ---
+
 <Layout metadata={metadata}>
+  <Fragment slot="header"><Header {...headerData} isSticky /></Fragment>
+  
   <Hero2
-    tagline="The New Standard for Clinic Web Design"
-    title='Your Practice Deserves a <span class="italic text-accent">Digital Masterpiece.</span>'
-    subtitle="We build high-end websites that sync with your social portfolio in real-time. No subscriptions. No tech stress. Just luxury for your brand."
+    tagline="Boutique Web Development for Clinics"
+    title='<span class="text-accent dark:text-white">Your Practice Deserves a Digital Masterpiece.</span>'
+    subtitle="We build high-end websites that sync with your social portfolio in real-time. Replace generic bio links with a professional address while you focus on your clients."
     actions={[
-      { variant: 'primary', text: "Secure Your URL - $99", href: '/pricing' }, 
+      { variant: 'primary', text: "Claim Your Clinic's Website", href: '/pricing/' }, 
       { text: 'View Live Demo', href: '/demo' }
     ]}
     image={{ src: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1024', width: 1024, height: 576 }}
   />
-
+  
   <Features
     id="features"
-    title="Elite Features for Elite Practitioners"
+    title="Everything Your Clinic Needs"
+    subtitle="Essential elements of a high-performance clinical website in a single, beautiful package."
     items={[
-        { title: 'Insta-Sync™ Technology', description: 'Your website updates automatically every time you post a treatment result to Instagram. Zero manual maintenance.', icon: 'tabler:brand-instagram' },
-        { title: 'Google Authority Signal', description: 'Replace generic bio links with a professional website that signals elite status to Google search users.', icon: 'tabler:brand-google' },
-        { title: 'Vanity .Skin Address', description: 'Ditch messy booking links for a professional launch.skin/yourclinic vanity URL.', icon: 'tabler:world' },
-        { title: 'One-Time Investment', description: 'Stop the monthly subscription drain. Pay $99 once and own your digital flagship for life.', icon: 'tabler:coin' },
+        { title: 'Aesthetic Medical Design', description: 'Custom-crafted layouts that mirror the luxury and cleanliness of your physical clinic space.', icon: 'tabler:palette' },
+        { title: 'Insta-Sync™ Technology', description: 'Every time you post a fresh result to Instagram, your website updates automatically. Zero effort required.', icon: 'tabler:brand-instagram' },
+        { title: 'Google Authority Signal', description: 'Replace generic links with a professional site that signals elite status to local Search and Maps.', icon: 'tabler:brand-google' },
+        { title: 'One-Time Investment', description: 'Stop paying $150/month for website builders. Pay $99 once and own your flagship for life.', icon: 'tabler:coin' },
     ]}
   />
 
   <Content
-    title="Always Fresh. Never Maintenance."
-    subtitle="Your portfolio shouldn't be a chore. We connect your Instagram so your site reflects your clinical results 24/7."
-    image={{ src: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800', alt: 'Live Feed Results' }}
+    tagline="Always Current. Zero Stress."
+    title="Your site stays as fresh as your latest facial."
+    items={[
+        { title: 'Real-time Instagram Sync', description: 'Your portfolio updates automatically with every post.', icon: 'tabler:refresh' },
+        { title: 'Automatic Results Refresh', description: 'Your latest clinical transformations are always front and center.', icon: 'tabler:camera' },
+        { title: 'Authority SEO Signal', description: 'Google prioritizes professional dedicated URLs over generic social links.', icon: 'tabler:trending-up' },
+    ]}
+    image={{ src: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800', alt: 'Live Results Feed' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Instant Clinical Portfolio</h3>
+      <p>We automatically sync your latest posts directly to your homepage so your site reflects your current results 24/7.</p>
+    </Fragment>
+    <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
+  </Content>
+
+  <Steps2
+    title="Three Simple Steps to Launch"
+    subtitle="The path to a better clinical presence begins here."
+    items={[
+      { title: '01. Secure Your Brand', description: 'Choose your vanity URL and secure your lifetime license.', icon: 'tabler:number-1' },
+      { title: '02. We Build & Sync', description: 'Our studio crafts your site and connects your social feeds for auto-updates.', icon: 'tabler:number-2' },
+      { title: '03. Launch & Glow', description: 'Go live on launch.skin/yourclinic and start attracting high-value clients.', icon: 'tabler:number-3' },
+    ]}
+    image={{ src: '/images/testimonial-6.webp', alt: 'Launch.Skin Process' }}
   />
 
-  <Pricing prices={[lifetimeDeal]} />
+  <Pricing title='One-Time Investment. Lifetime Growth.' prices={[lifetimeDeal]} />
 
   <FAQs
     title="Common Questions"
     items={[
-        { title: 'Is it really $99 forever?', description: 'Yes. We don’t believe in "SaaS taxes" for practitioners. You pay for the setup and lifetime hosting license once.' },
-        { title: 'How long does setup take?', description: 'If you secure your URL by 2 PM, we usually have your custom sync and clinical dashboard live by the time you close your clinic.' },
+        { title: 'What is a Vanity URL?', description: 'A branded link like <strong>launch.skin/yourclinic</strong>. It replaces messy links in your bio with a professional presence.' },
+        { title: 'Is it really $99 forever?', description: 'Yes. We charge for setup and hosting once. You never pay a monthly subscription fee again.' },
+        { title: 'Do I need tech skills?', description: 'None. If you can post to Instagram, you can maintain your site. Everything else is handled by our team.' },
     ]}
   />
 </Layout>

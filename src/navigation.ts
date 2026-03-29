@@ -3,7 +3,6 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: 'Features', href: getPermalink('/#features') },
-    { text: 'How It Works', href: getPermalink('/#howitworks') },
     { text: 'The Story', href: getPermalink('/about') },
     { text: 'Live Demo', href: getPermalink('/demo') },
     { text: 'Pricing', href: getPermalink('/pricing') },
@@ -30,5 +29,5 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [],
-  footNote: '© 2026. All rights reserved.',
+  footNote: '© 2026 Launch.Skin. All rights reserved.',
 };
