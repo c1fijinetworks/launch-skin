@@ -1,22 +1,33 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/MarkdownLayout.astro';
 
-const metadata = { title: 'Terms of Service | Launch.Skin' };
+const metadata = {
+  title: 'Terms of Service',
+  description: 'Comprehensive Terms of Service and User Agreement for Launch.Skin.',
+};
 ---
-<Layout metadata={metadata}>
-  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
-    <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter mb-8 text-center">Terms of Service</h1>
-    <div class="prose prose-lg max-w-4xl dark:prose-invert">
-      <p>Last updated: March 21, 2026</p>
-      <p>By using Launch.Skin, you agree to the following terms:</p>
-      <h2>1. Lifetime License</h2>
-      <p>The $99 fee grants you a lifetime license for your specific vanity URL and boutique site setup. There are no recurring monthly subscription fees.</p>
-      <h2>2. Custom Domains</h2>
-      <p>While the launch.skin vanity URL is included, custom domains (e.g., .com) are subject to a $15/year registration and management fee if processed through our studio.</p>
-      <h2>3. Service Use</h2>
-      <p>You agree to provide accurate business information and Instagram handles for the purpose of site generation.</p>
-      <h2>4. Support</h2>
-      <p>Lifetime white-glove support includes basic menu updates and technical maintenance of your URL hosting.</p>
-    </div>
-  </section>
+
+<Layout frontmatter={metadata}>
+
+<p><em>Last Updated: March 2026</em></p>
+
+<h2>1. Acceptance of Terms</h2>
+<p>By accessing, purchasing, or using the services provided by Launch.Skin ("Company", "we", "us", or "our"), including our website and custom vanity booking URL platforms, you agree to be bound by these Terms of Service ("Terms").</p>
+
+<h2>2. Description of Service</h2>
+<p>Launch.Skin provides boutique vanity URLs and digital hosting services tailored for skin clinics, estheticians, and medical spas. This includes custom branding, Google Business Profile integration, Instagram results synchronization, and optimized digital portfolio interfaces (the "Service").</p>
+
+<h2>3. Payments and "Lifetime" Deal</h2>
+<p>We offer a one-time fee structure for a "Lifetime Deal" (e.g., $99). In this context, "Lifetime" refers to the operational lifetime of the Launch.Skin product. We will make every commercially reasonable effort to support the service indefinitely with no monthly fees. However, we reserve the right to modify or discontinue the Service with reasonable notice if the business undergoes significant restructuring or if critical third-party infrastructure (such as API access) becomes unviable.</p>
+
+<h2>4. User Content and Intellectual Property</h2>
+<p><strong>Your Branding:</strong> You retain full ownership of all business names, logos, and portfolio data you provide. You grant us a non-exclusive license to display this content solely for the purpose of operating your vanity URL.</p>
+<p><strong>Our Intellectual Property:</strong> The underlying code, design frameworks, and the Launch.Skin brand are the exclusive property of the Company.</p>
+
+<h2>5. General Terms & Governing Law</h2>
+<p><strong>Governing Law:</strong> These Terms shall be governed by the laws of the State of Delaware, without regard to its conflict of law principles. Any failure on our part to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+
+<h2>6. Contact Us</h2>
+<p>If you have any questions about these Terms, please contact us via our <a href="/contact">Contact Page</a>.</p>
+
 </Layout>

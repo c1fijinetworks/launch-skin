@@ -1,22 +1,33 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/MarkdownLayout.astro';
 
-const metadata = { title: 'Privacy Policy | Launch.Skin' };
+const metadata = {
+  title: 'Privacy Policy',
+  description: 'Privacy Policy for Launch.Skin explaining our data collection and protection practices.',
+};
 ---
-<Layout metadata={metadata}>
-  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
-    <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter mb-8 text-center">Privacy Policy</h1>
-    <div class="prose prose-lg max-w-4xl dark:prose-invert">
-      <p>Last updated: March 21, 2026</p>
-      <p>At Launch.Skin, we take your privacy seriously. This policy describes how we collect, use, and handle your information when you use our website and services.</p>
-      <h2>1. Information We Collect</h2>
-      <p>We collect information you provide directly to us, such as when you purchase a vanity URL, including your clinic name, Instagram handle, and payment information.</p>
-      <h2>2. How We Use Information</h2>
-      <p>We use the information to set up your professional digital address, sync your social media feeds, and provide ongoing white-glove support.</p>
-      <h2>3. Data Security</h2>
-      <p>We implement enterprise-grade security measures to protect your data. We do not store your Google login credentials; we only use public business data for syncing.</p>
-      <h2>4. Contact Us</h2>
-      <p>If you have questions about your data, please visit <a href="/contact">our contact page</a>.</p>
-    </div>
-  </section>
+
+<Layout frontmatter={metadata}>
+
+<p><em>Last Updated: March 2026</em></p>
+
+<h2>1. Introduction</h2>
+<p>Launch.Skin ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our website and vanity booking URL services.</p>
+
+<h2>2. Information We Collect</h2>
+<ul>
+    <li><strong>Personal Data:</strong> Names, email addresses, and clinic details provided via setup forms.</li>
+    <li><strong>Business Data:</strong> Public business info, including studio names, Instagram results data, and Google Business Profile links.</li>
+    <li><strong>Payment Data:</strong> Handled via third-party processors (PayPal). We do not store financial info on our servers.</li>
+</ul>
+
+<h2>3. Governing Law</h2>
+<p>This Privacy Policy and our privacy practices are governed by the laws of <strong>the State of Delaware, United States</strong>, without regard to its conflict of law principles. Any legal actions related to this Policy shall be brought exclusively in the state or federal courts located in Delaware.</p>
+
+<h2>4. Your Rights</h2>
+<p>You have the right to request access to the data we hold about you or request its deletion. To exercise these rights or to disconnect your vanity URL synchronization, please contact us directly.</p>
+
+<h2>5. Contact Us</h2>
+<p>If you have any questions about this Privacy Policy, please contact us through our <a href="/contact">Contact Page</a>.</p>
+
 </Layout>

@@ -3,8 +3,9 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: 'Features', href: getPermalink('/#features') },
-    { text: 'Process', href: getPermalink('/#process') },
+    { text: 'How It Works', href: getPermalink('/#howitworks') },
     { text: 'The Story', href: getPermalink('/about') },
+    { text: 'Live Demo', href: getPermalink('/demo') },
     { text: 'Pricing', href: getPermalink('/pricing') },
   ],
   actions: [
@@ -18,6 +19,7 @@ export const footerData = {
       title: 'Launch.Skin | Clinic Artistry ✨',
       links: [
         { text: "Claim Your Site – $99", href: getPermalink('/pricing') },
+        { text: 'Live Demo', href: getPermalink('/demo') },
         { text: 'The Story', href: getPermalink('/about') },
         { text: 'Support', href: getPermalink('/contact') },
       ],
