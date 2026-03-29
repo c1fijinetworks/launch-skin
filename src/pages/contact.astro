@@ -2,34 +2,17 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import GoogleContactForm from '~/components/widgets/GoogleContactForm.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
 
 const metadata = {
-  title: 'Contact Support | Launch.Skin',
-  description: 'Have questions about the lifetime deal or need a multi-location quote? Contact our team today.',
-  ignoreTitleTemplate: true,
+  title: 'Contact | Launch.Skin',
+  description: 'Reach out for white-glove setup or support for your clinic website.',
 };
 ---
-
 <Layout metadata={metadata}>
   <HeroText 
-    tagline="We're in your corner ⭐⭐⭐⭐⭐"
-    title="Let's Talk About Your Clinic." 
-    subtitle="Have questions about the lifetime deal? Need a bulk discount for multiple rooms? Or just want to check up? We respond faster than a setting spray dries."
+    tagline="Support"
+    title="We handle everything." 
+    subtitle="Have questions about the Launch.Skin boutique concept? Our team is ready to help your practice shine online."
   />
-
   <GoogleContactForm />
-
-  <Features
-    class="-mt-16"
-    columns={3}
-    items={[
-      { title: 'Multi-Room Discounts', description: 'Running a large clinic or spa? Contact us for custom bulk pricing on 3+ licenses.', icon: 'tabler:building-store' },
-      { title: 'White-Glove Support', description: 'Need help with your widget installation? Let us help you with that.', icon: 'tabler:headset' },
-      { title: 'Industry Partnerships', description: 'Are you a skincare consultant? Let’s work together.', icon: 'tabler:users' },
-    ]}
-  />
-
-  <Hero class="-mt-16" image={{ src: '/images/testimonial-7.webp', alt: 'Launch.Skin happy client' }} />
 </Layout>

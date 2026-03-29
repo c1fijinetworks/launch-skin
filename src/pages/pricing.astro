@@ -4,55 +4,45 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 import Hero from '~/components/widgets/Hero.astro';
 
-const metadata = {
-  title: 'Pricing - Launch.Skin | Save $600/year',
-  description: 'The last review system you will ever buy. One-time $99 payment for a lifetime of 5-star Google reviews. No monthly fees.',
-  ignoreTitleTemplate: true,
+const metadata = { 
+  title: 'Pricing | Secure Your Elite Launch.Skin URL', 
+  description: 'Professional clinic vanity URLs with zero monthly fees. Transform your Google Business Profile and Social Bio into a luxury portfolio.' 
 };
 ---
-
 <Layout metadata={metadata}>
   <HeroText 
-    tagline="The Last Review System You'll Ever Buy ⭐⭐⭐⭐⭐"
-    title="Stop Paying Monthly Fees." 
-    subtitle="Most reputation software charges $150 every single month. We charge a flat $99 one-time fee with total setup. That is $600+ back in your pocket in the first year alone to invest in your clinic."
+    tagline="The Professional Standard"
+    title="A Stunning Home for Your Practice. Live in Hours." 
+    subtitle="More than just a link—it's your clinic's digital flagship. Own a beautiful vanity URL (launch.skin/yourclinic) that transforms your social bio into a high-end experience."
   />
 
   <div class="-mt-16">
-    <Pricing
-      id="pricing"
-      title="Invest Once. Grow Forever."
-      subtitle="Full White-Glove Setup Included. We build the engine; you focus on your clients."
-      prices={[lifetimeDeal]}
-    />
+    <Pricing prices={[lifetimeDeal]} />
   </div>
 
   <Features3
-    title="What is included in your $99 setup?"
-    subtitle="We handle the heavy lifting so you can stay in the treatment room."
+    title="Elevate Every Touchpoint"
+    subtitle="We bridge the gap between your work in the treatment room and your presence online."
     columns={3}
     items={[
-      { title: 'High-Scan Room Signs', description: 'Custom-designed QR codes for your treatment rooms, optimized to capture that post-facial glow.', icon: 'tabler:qrcode' },
-      { title: 'Direct Google Maps Sync', description: 'We connect your engine directly to your Google Business Profile to boost your local ranking.', icon: 'tabler:brand-google' },
-      { title: 'The "Wall of Love" Widget', description: 'A beautiful, automated widget for your website that showcases your best reviews to new visitors.', icon: 'tabler:code' },
-      { title: 'Local SEO Dominance', description: 'Fresh, consistent reviews are the #1 factor for ranking in local search. Our system automates this.', icon: 'tabler:rocket' },
-      { title: 'Unlimited 5-Star Reviews', description: 'No "per-review" fees or caps. Collect 10 reviews or 10,000—your price never changes.', icon: 'tabler:infinity' },
-      { title: 'Lifetime Future-Proofing', description: 'Get all future software updates and new features for life at no extra cost.', icon: 'tabler:refresh' },
+      { title: 'Social Bio Transformation', description: 'Ditch generic link tools. Your URL provides a high-end experience that keeps clients focused on your results and booking link.', icon: 'tabler:link' },
+      { title: 'Google Business Authority', description: 'Replace generic links on your Google Profile with a dedicated clinic homepage that creates a massive authority signal.', icon: 'tabler:brand-google' },
+      { title: 'Live Result Sync', description: 'We pull your live Instagram feed directly onto your unique URL, ensuring your results are always current without lifting a finger.', icon: 'tabler:brand-instagram' },
+      { title: 'Detailed Treatment Menu', description: 'Present your service menu with boutique styling, detailing your facials, peels, and advanced treatments beautifully.', icon: 'tabler:clipboard-list' },
+      { title: 'One-Time License', description: 'No monthly subscriptions. Pay once and own your professional identity for life. We handle the hosting and security.', icon: 'tabler:coin' },
+      { title: 'White-Glove Delivery', description: 'From setup to feed syncing, we handle the technical heavy lifting with guaranteed same-day delivery.', icon: 'tabler:headset' },
     ]}
   />
 
   <FAQs
     class="-mt-16 px-6"
-    title="Pricing FAQ"
+    title="Pricing & Setup Questions"
     items={[
-        { title: 'Why is it a one-time fee?', description: 'We believe in supporting local practitioners. We prefer to charge a fair setup fee for our labor rather than "renting" you software forever.', icon: 'tabler:coin' },
-        { title: 'What if I am not tech-savvy?', description: 'That is why we are here. We do the setup for you. If you can print a PDF, you are ready!', icon: 'tabler:tool' },
-        { title: 'Are there any hidden costs?', description: 'Zero. No maintenance fees, no hosting fees, and no "success" fees. $99 is the total cost.', icon: 'tabler:check' },
-        { title: 'What if I open a second location?', description: 'Your $99 license covers one Google Maps location. Contact us for discounts on additional rooms or clinics!', icon: 'tabler:building-store' },
+        { title: 'How does same-day setup work?', description: 'Secure your license, fill out our brief content form, and if received by 2PM EST, your site goes live before the business day ends.', icon: 'tabler:bolt' },
+        { title: 'Is this a monthly fee?', description: 'No. Launch.Skin is a one-time investment for setup and boutique design. You never pay a monthly fee again.', icon: 'tabler:coin' },
     ]}
   >
     <Fragment slot="bg"><div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div></Fragment>
@@ -60,13 +50,7 @@ const metadata = {
 
   <Hero class="-mt-16">
     <Fragment slot="image">
-      <img src="/images/testimonial-5.webp" alt="Skin professional reviewing feedback" class="mx-auto rounded-md w-full shadow-lg" loading="lazy" />
+      <img src="/images/testimonial-5.webp" alt="Practitioner reviewing results" class="mx-auto rounded-md w-full shadow-lg" loading="lazy" />
     </Fragment>
   </Hero>
-
-  <CallToAction
-    title="Ready to Turn Every Radiant Treatment Into a Rave Review?"
-    subtitle="Claim your lifetime deal today and have your custom review engine ready for your first client tomorrow morning ⭐⭐⭐⭐⭐"
-    actions={[{ variant: 'primary', text: 'Secure My $99 Lifetime Deal', href: '#pricing' }]}
-  />
 </Layout>
