@@ -4,7 +4,7 @@ export const lifetimeDeal = {
   price: 99,
   period: 'One-time payment',
   items: [
-    { description: 'Premium Branded Vanity URL (launch.skin/yourclinic)' },
+    { description: 'Premium Branded Vanity URL (yourclinic.launch.skin)' },
     { description: 'Luxury Aesthetic Clinical Design' },
     { description: 'High-Authority SEO Signal for Search/Maps' },
     { description: 'Mobile-First Boutique User Experience' },

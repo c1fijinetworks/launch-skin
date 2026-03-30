@@ -59,11 +59,11 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
                     />
                     <input type="hidden" name="on0" value="Vanity URL Request" />
                     
-                    <!-- URL Preview Box -->
+                    <!-- URL Preview Box (Updated to Subdomain Format) -->
                     <div class="mt-3 p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 rounded-lg flex items-center gap-3">
                         <Icon name="tabler:world" class="w-5 h-5 text-primary" />
                         <span class="text-sm font-medium text-gray-600 dark:text-gray-300 break-all">
-                            https://launch.skin/<span id="url-preview" class="text-primary font-bold underline">yourclinic</span>
+                            https://<span id="url-preview" class="text-primary font-bold underline">yourclinic</span>.launch.skin
                         </span>
                     </div>
                 </div>
@@ -102,9 +102,10 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
       
       if (input && preview) {
         input.addEventListener('input', (e) => {
-          // Clean the input: lowercase, replace spaces/special chars with hyphens
+          // Clean the input for subdomain standards
           let val = e.target.value.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-');
           if (val.startsWith('-')) val = val.substring(1);
+          if (val.endsWith('-')) val = val.slice(0, -1);
           
           input.value = val;
           preview.textContent = val || 'yourclinic';
@@ -112,9 +113,7 @@ const { title, subtitle, tagline, prices = [], classes = {}, ...rest } = Astro.p
       }
     }
 
-    // Run on initial load
     initPricingForm();
-    // Run on view transitions navigation
     document.addEventListener('astro:after-swap', initPricingForm);
   </script>
 </WidgetWrapper>
