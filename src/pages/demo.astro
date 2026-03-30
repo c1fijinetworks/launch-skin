@@ -40,6 +40,10 @@
     .animate-slide-up { animation: slideInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 2s both; }
     #mobile-menu { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease; transform: translateX(100%); opacity: 0; pointer-events: none; }
     #mobile-menu.open { transform: translateX(0); opacity: 1; pointer-events: auto; }
+    
+    /* Expandable menu transition */
+    #extra-services { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease; }
+    #extra-services.expanded { max-height: 1000px; opacity: 1; }
   </style>
 </head>
 <body>
@@ -123,7 +127,6 @@
         <div class="group relative aspect-square overflow-hidden cursor-pointer"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"/><div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i data-lucide="instagram" class="text-bg w-8 h-8"></i></div></div>
         <div class="group relative aspect-square overflow-hidden cursor-pointer"><img src="https://images.unsplash.com/photo-1552046122-03184de85e08?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"/><div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i data-lucide="instagram" class="text-bg w-8 h-8"></i></div></div>
         <div class="group relative aspect-square overflow-hidden cursor-pointer"><img src="https://images.unsplash.com/photo-1498843053639-170ff2122f35?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"/><div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i data-lucide="instagram" class="text-bg w-8 h-8"></i></div></div>
-        <!-- NEW IMAGES ADDED BELOW -->
         <div class="group relative aspect-square overflow-hidden cursor-pointer"><img src="https://images.unsplash.com/photo-1731514693674-a32211b63996?w=500&auto=format&fit=crop&q=60" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"/><div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i data-lucide="instagram" class="text-bg w-8 h-8"></i></div></div>
         <div class="group relative aspect-square overflow-hidden cursor-pointer"><img src="https://images.unsplash.com/photo-1555820585-c5ae44394b79?w=500&auto=format&fit=crop&q=60" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"/><div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i data-lucide="instagram" class="text-bg w-8 h-8"></i></div></div>
         <div class="group relative aspect-square overflow-hidden cursor-pointer"><img src="https://images.unsplash.com/photo-1700760933574-9f0f4ea9aa3b?w=500&auto=format&fit=crop&q=60" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"/><div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i data-lucide="instagram" class="text-bg w-8 h-8"></i></div></div>
@@ -138,7 +141,6 @@
       <div class="text-center mb-20 space-y-4"><span class="text-accent text-xs uppercase tracking-[0.3em] font-semibold">The Experts</span><h2 class="text-4xl md:text-6xl font-serif">Master Practitioners</h2></div>
       <div class="grid md:grid-cols-3 gap-12">
         <div class="group cursor-pointer">
-          <!-- UPDATED IMAGE FOR DR JULIAN VANCE -->
           <div class="aspect-[4/5] overflow-hidden mb-6 relative"><img src="https://images.unsplash.com/photo-1662837775286-7e6258c7c595?w=500&auto=format&fit=crop&q=60" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" /></div>
           <h3 class="text-2xl font-serif mb-1">Dr. Julian Vance</h3><p class="text-accent text-xs uppercase tracking-widest font-medium">Clinical Director</p>
         </div>
@@ -185,8 +187,26 @@
           <div class="space-y-2"><h3 class="text-2xl font-serif group-hover:text-accent transition-colors">Medical-Grade Peels</h3><p class="text-primary/60 text-sm max-w-md">Advanced resurfacing protocols for pigment and texture.</p></div>
           <span class="text-accent font-serif text-xl md:text-2xl">from $250</span>
         </div>
+        
+        <!-- EXPANDABLE EXTRA SERVICES -->
+        <div id="extra-services" class="space-y-12">
+            <div class="group flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-primary/10 pb-8 hover:border-accent transition-colors duration-500">
+              <div class="space-y-2"><h3 class="text-2xl font-serif group-hover:text-accent transition-colors">Advanced Microneedling</h3><p class="text-primary/60 text-sm max-w-md">Precision collagen induction therapy for scar reduction and firming.</p></div>
+              <span class="text-accent font-serif text-xl md:text-2xl">from $350</span>
+            </div>
+            <div class="group flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-primary/10 pb-8 hover:border-accent transition-colors duration-500">
+              <div class="space-y-2"><h3 class="text-2xl font-serif group-hover:text-accent transition-colors">Dermal Sculpting</h3><p class="text-primary/60 text-sm max-w-md">Architectural volume restoration and structural contouring.</p></div>
+              <span class="text-accent font-serif text-xl md:text-2xl">from $600</span>
+            </div>
+            <div class="group flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-primary/10 pb-8 hover:border-accent transition-colors duration-500">
+              <div class="space-y-2"><h3 class="text-2xl font-serif group-hover:text-accent transition-colors">LED Rejuvenation</h3><p class="text-primary/60 text-sm max-w-md">Targeted light therapy for cellular repair and inflammation control.</p></div>
+              <span class="text-accent font-serif text-xl md:text-2xl">from $95</span>
+            </div>
+        </div>
       </div>
-      <div class="mt-20 text-center"><button class="bg-primary text-bg px-12 py-5 text-xs uppercase tracking-widest hover:bg-accent transition-all duration-500 cursor-pointer">Full Treatment Menu</button></div>
+      <div class="mt-20 text-center">
+        <button id="full-menu-btn" class="bg-primary text-bg px-12 py-5 text-xs uppercase tracking-widest hover:bg-accent transition-all duration-500 cursor-pointer">Full Treatment Menu</button>
+      </div>
     </div>
   </section>
 
@@ -226,6 +246,8 @@
     const navbar = document.getElementById('navbar');
     const navBtn = document.getElementById('nav-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const fullMenuBtn = document.getElementById('full-menu-btn');
+    const extraServices = document.getElementById('extra-services');
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -249,11 +271,22 @@
     document.getElementById('menu-btn').addEventListener('click', toggleMenu);
     document.getElementById('close-menu-btn').addEventListener('click', toggleMenu);
 
-    // FIX: Close menu when a link is clicked
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.remove('open');
       });
+    });
+
+    // Expand treatment menu logic
+    fullMenuBtn.addEventListener('click', () => {
+      extraServices.classList.toggle('expanded');
+      if (extraServices.classList.contains('expanded')) {
+        fullMenuBtn.textContent = 'Show Less';
+      } else {
+        fullMenuBtn.textContent = 'Full Treatment Menu';
+        // Smooth scroll back to services top if closing
+        document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+      }
     });
   </script>
 </body>
