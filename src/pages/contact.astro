@@ -2,17 +2,54 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import GoogleContactForm from '~/components/widgets/GoogleContactForm.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
 
 const metadata = {
-  title: 'Support | Launch.Skin',
-  description: 'Reach out for white-glove setup or support for your clinical vanity URL.',
+  title: 'Contact Support | Launch.Skin',
+  description: 'Have questions about the vanity URL setup for your skin clinic? Contact our team today.',
 };
 ---
+
 <Layout metadata={metadata}>
+  <!-- Header Section -->
   <HeroText 
-    tagline="Support"
-    title="White-Glove Setup." 
-    subtitle="Have questions about securing your clinical vanity URL? Our team is ready to help your practice shine online."
+    tagline="We're in your corner ⭐⭐⭐⭐⭐"
+    title="Let's Talk About Your Clinic." 
+    subtitle="Have questions about the vanity URL setup? Need a bulk discount for multiple practitioners? We respond faster than a chemical peel sets."
   />
+
+  <!-- Contact Form Section -->
   <GoogleContactForm />
+
+  <!-- Information Grid Section -->
+  <Features
+    id="contact-features"
+    columns={3}
+    items={[
+      {
+        title: 'Multi-Clinic Discounts',
+        description: 'Managing a group of clinics or an aesthetic academy? Contact us for custom bulk pricing on 3+ vanity URLs.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'White-Glove Support',
+        description: 'Need help with your Google Business Profile integration? Let our team handle the technical heavy lifting for you.',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Brand Partnerships',
+        description: 'Are you a beauty consultant or skincare educator? Let’s discuss how we can bring vanity URLs to your community.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <!-- Bottom Hero Image Section -->
+  <Hero
+    image={{
+      src: '/images/testimonial-6.webp',
+      alt: 'Launch.Skin clinical excellence',
+    }}
+  />
 </Layout>
