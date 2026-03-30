@@ -13,7 +13,10 @@ const metadata = { title: 'Our Story | Launch.Skin' };
     tagline="Our Philosophy"
     title='The Digital Address for <span class="text-accent">Elite Practitioners</span>'
     subtitle="We believe your digital address should be as beautiful as the results you create. Your website is your digital handshake; it should reflect clinical luxury."
-    actions={[{ variant: 'primary', text: 'Secure My Address', href: '/pricing/' }]}
+    actions={[
+      { variant: 'primary', text: 'Secure My Address', href: '/pricing/' },
+      { text: 'Tour the Digital Masterpiece', href: '/demo' }
+    ]}
     image={{ src: '/images/hero-poster.webp', alt: 'Launch.Skin Branding' }}
   />
   
@@ -25,6 +28,7 @@ const metadata = { title: 'Our Story | Launch.Skin' };
         { title: 'Google Search Authority', description: 'A dedicated launch.skin address serves as a powerful SEO signal to Google, helping you dominate local search rankings.', icon: 'tabler:brand-google' },
         { title: 'Zero-Maintenance Lifestyle', description: 'Forget plugin updates and broken layouts. Our enterprise-grade stack stays live and secure 24/7 with no input from you.', icon: 'tabler:tool' },
     ]}
+    callToAction={{ text: 'See the Clinical Standard', href: '/demo', variant: 'link' }}
   >
     <Fragment slot="content">
       <h3 class="text-3xl font-bold mb-4">Our Technical Philosophy</h3>
@@ -41,6 +45,7 @@ const metadata = { title: 'Our Story | Launch.Skin' };
         { title: 'Bio-Link Optimization', description: 'Replace cluttered, generic link-trees with a focused, high-converting digital storefront that drives direct bookings.', icon: 'tabler:device-mobile' },
         { title: 'Global Edge Performance', description: 'Your site is deployed on a global edge network, ensuring instant loading speeds for every potential client, everywhere.', icon: 'tabler:bolt' },
     ]}
+    callToAction={{ text: 'View the Aesthetic Showroom', href: '/demo', variant: 'link' }}
   >
     <Fragment slot="content"><h3 class="text-3xl font-bold mb-4">The Digital Difference</h3></Fragment>
     <Fragment slot="image"><img src="/images/testimonial-3.webp" alt="Practitioner" class="rounded-lg shadow-xl w-full" /></Fragment>

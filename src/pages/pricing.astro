@@ -11,7 +11,15 @@ import { lifetimeDeal } from '~/data/pricingData';
 const metadata = { title: 'Pricing | Launch.Skin' };
 ---
 <Layout metadata={metadata}>
-  <HeroText tagline="The Professional Standard" title="A Stunning Home for Your Practice." subtitle="Transform your social bio into a high-end experience with a dedicated vanity URL." />
+  <HeroText 
+    tagline="The Professional Standard" 
+    title="A Stunning Home for Your Practice." 
+    subtitle="Transform your social bio into a high-end experience with a dedicated vanity URL." 
+    actions={[
+      { variant: 'primary', text: 'Secure My $99 Deal', href: '#pricing' },
+      { text: 'Experience the Demo Clinic', href: '/demo' }
+    ]}
+  />
 
   <Pricing prices={[lifetimeDeal]} />
 
@@ -40,5 +48,12 @@ const metadata = { title: 'Pricing | Launch.Skin' };
 
   <Hero class="-mt-16"><Fragment slot="image"><img src="/images/testimonial-5.webp" alt="Results" class="mx-auto rounded-md w-full shadow-lg" /></Fragment></Hero>
 
-  <CallToAction title="Ready to Launch?" subtitle="Claim your professional address today." actions={[{ variant: 'primary', text: 'Secure My $99 Deal', href: '#pricing' }]} />
+  <CallToAction 
+    title="Ready to Launch?" 
+    subtitle="Claim your professional address today or see a finished example." 
+    actions={[
+      { variant: 'primary', text: 'Secure My $99 Deal', href: '#pricing' },
+      { text: 'Tour Your Future Website', href: '/demo' }
+    ]} 
+  />
 </Layout>
