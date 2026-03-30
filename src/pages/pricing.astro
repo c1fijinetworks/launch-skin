@@ -11,7 +11,7 @@ import { lifetimeDeal } from '~/data/pricingData';
 const metadata = { title: 'Pricing | Launch.Skin' };
 ---
 <Layout metadata={metadata}>
-  <HeroText tagline="The Professional Standard" title="A Stunning Home for Your Practice." subtitle="Transform your social bio into a high-end experience with a professional vanity URL." />
+  <HeroText tagline="The Professional Standard" title="A Stunning Home for Your Practice." subtitle="Transform your social bio into a high-end experience with a dedicated vanity URL." />
 
   <Pricing prices={[lifetimeDeal]} />
 
@@ -19,24 +19,24 @@ const metadata = { title: 'Pricing | Launch.Skin' };
     title="Elevate Every Touchpoint"
     columns={3}
     items={[
-      { title: 'Social Bio Transformation', description: 'Ditch generic link tools for a high-end experience.', icon: 'tabler:link' },
+      { title: 'Social Bio Transformation', description: 'Ditch generic link tools for a high-end, branded experience.', icon: 'tabler:link' },
       { title: 'Google Business Authority', description: 'Replace generic links with a dedicated clinical homepage.', icon: 'tabler:brand-google' },
-      { title: 'Live Results Sync', description: 'Automated Instagram portfolio updates 24/7.', icon: 'tabler:brand-instagram' },
-      { title: 'Detailed Treatment Menu', description: 'Present your services with boutique medical-grade styling.', icon: 'tabler:clipboard-list' },
+      { title: 'Mobile-First Design', description: 'Your site looks flawless on every device your clients use.', icon: 'tabler:device-mobile' },
+      { title: 'Professional Domain', description: 'Exclusive launch.skin vanity URL included with every license.', icon: 'tabler:id' },
       { title: 'One-Time License', description: 'Pay once and own your professional identity for life.', icon: 'tabler:coin' },
-      { title: 'White-Glove Delivery', description: 'Guaranteed same-day technical setup.', icon: 'tabler:headset' },
+      { title: 'White-Glove Delivery', description: 'Guaranteed same-day technical setup by our team.', icon: 'tabler:headset' },
     ]}
   />
 
   <FAQs
     title="Pricing Questions"
     items={[
-        { title: 'How does same-day setup work?', description: 'Order by 2PM EST and your site goes live before the business day ends.' },
-        { title: 'Can I use a custom .com?', description: 'Yes! We can manage your standalone domain for $15/year.' },
+        { title: 'How does same-day setup work?', description: 'Order by 2PM EST and your professional clinical homepage goes live before the business day ends.' },
+        { title: 'Can I use a custom .com?', description: 'Yes! While we specialize in .skin vanity URLs, we can connect your site to any standalone domain you own.' },
     ]}
   />
 
   <Hero class="-mt-16"><Fragment slot="image"><img src="/images/testimonial-5.webp" alt="Results" class="mx-auto rounded-md w-full shadow-lg" /></Fragment></Hero>
 
-  <CallToAction title="Ready to Launch?" subtitle="Claim your URL today." actions={[{ variant: 'primary', text: 'Secure My $99 Deal', href: '#pricing' }]} />
+  <CallToAction title="Ready to Launch?" subtitle="Claim your professional address today." actions={[{ variant: 'primary', text: 'Secure My $99 Deal', href: '#pricing' }]} />
 </Layout>

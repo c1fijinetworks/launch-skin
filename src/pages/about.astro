@@ -6,13 +6,13 @@ import Pricing from '~/components/widgets/Pricing.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import { lifetimeDeal } from '~/data/pricingData';
 
-const metadata = { title: 'The Story | Launch.Skin' };
+const metadata = { title: 'Our Story | Launch.Skin' };
 ---
 <Layout metadata={metadata}>
   <Hero2
     tagline="Our Philosophy"
-    title='Elite Websites for <span class="text-accent">Elite Practitioners</span>'
-    subtitle="We believe your digital address should be as beautiful as the radiant skin you create. Your website is your handshake, and it should reflect clinical luxury."
+    title='The Digital Address for <span class="text-accent">Elite Practitioners</span>'
+    subtitle="We believe your digital address should be as beautiful as the results you create. Your website is your digital handshake; it should reflect clinical luxury."
     actions={[{ variant: 'primary', text: 'Secure My Address', href: '/pricing/' }]}
     image={{ src: '/images/hero-poster.webp', alt: 'Launch.Skin Branding' }}
   />
@@ -20,13 +20,13 @@ const metadata = { title: 'The Story | Launch.Skin' };
   <Content
     isReversed={false}
     items={[
-        { title: 'Mirror Your Luxury', description: 'Your digital home should signal expertise before a client even books.', icon: 'tabler:award' },
-        { title: 'Focus on Skin, Not Tech', description: 'We handle the servers and code so you can focus on making clients glow.', icon: 'tabler:brush' },
+        { title: 'Mirror Your Luxury', description: 'Your digital home should signal expertise before a client even walks through your door.', icon: 'tabler:award' },
+        { title: 'Focus on Results, Not Tech', description: 'We handle the servers and code so you can focus on making your clients feel their best.', icon: 'tabler:brush' },
     ]}
   >
     <Fragment slot="content">
       <h3 class="text-3xl font-bold mb-4">Our Technical Philosophy</h3>
-      <p class="text-lg text-muted">In the modern beauty industry, "Generic" is the enemy. We provide a dedicated digital address that establishes local authority.</p>
+      <p class="text-lg text-muted">In the modern aesthetics industry, a generic "Link-in-Bio" is a missed opportunity. We provide a dedicated digital address that establishes local authority and builds trust.</p>
     </Fragment>
     <Fragment slot="image"><img src="/images/testimonial-4.webp" alt="Elite Clinic" class="rounded-lg shadow-xl w-full" /></Fragment>
   </Content>
@@ -34,8 +34,8 @@ const metadata = { title: 'The Story | Launch.Skin' };
   <Content
     isReversed={true}
     items={[
-        { title: 'A New Clinical Standard', description: 'Your best work deserves a high-end gallery with automated sync.', icon: 'tabler:rocket' },
-        { title: 'White-Glove Support', description: 'We configure your vanity URL so you can stay in the treatment room.', icon: 'tabler:headset' },
+        { title: 'A New Clinical Standard', description: 'Establish your brand on a domain dedicated exclusively to the world of skin.', icon: 'tabler:rocket' },
+        { title: 'White-Glove Support', description: 'We configure your vanity URL and launch your site so you can stay in the treatment room.', icon: 'tabler:headset' },
     ]}
   >
     <Fragment slot="content"><h3 class="text-3xl font-bold mb-4">The Digital Difference</h3></Fragment>
